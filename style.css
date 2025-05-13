@@ -1,0 +1,245 @@
+/* Eric Meyer Reset v2.0 | 20110126
+   http://meyerweb.com/eric/tools/css/reset/
+   License: none (public domain)*/
+
+   html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+   a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,
+   small, strike, strong, sub, sup, tt, var,
+   b, u, i, center,
+   dl, dt, dd, ol, ul, li,
+   fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,
+   article, aside, canvas, details, embed,
+   figure, figcaption, footer, header, hgroup,
+   menu, nav, output, ruby, section, summary,
+   time, mark, audio, video {
+       margin: 0;
+       padding: 0;
+       border: 0;    font-size: 100%;
+       font: inherit;
+       vertical-align: baseline;
+   }
+   /* HTML5 display-role reset for older browsers */article, aside, details, figcaption, figure,
+   footer, header, hgroup, menu, nav, section {    display: block;}
+   body {
+       line-height: 1;
+   }
+   ol, ul {
+       list-style: none;
+   }
+   blockquote, q {
+       quotes: none;
+   }
+   blockquote:before, blockquote:after,
+   q:before, q:after {
+       content: '';
+       content: none;}
+   table {
+       border-collapse: collapse;
+       border-spacing: 0;
+   }/* Default styles for the entire website */
+   body {
+       font-family: Arial, sans-serif; /* Sets the default font family */    font-size: 16px;              /* Sets the default font size */
+       color: #333;                  /* Sets the default text color to a dark gray */
+       background-color: #f0f0f0;     /* Sets the default background color to a light gray */
+       margin: 0;                    /* Reset default margin */
+       padding: 0;                   /* Reset default padding */
+       line-height: 1.6;             /* Sets the default line height */
+   }
+   /* Typography Scale */
+   h1 {
+       font-size: 2.5rem;           /* ~40px */    font-weight: bold;
+       line-height: 1.2;
+       letter-spacing: -0.05rem;
+       margin-bottom: 0.5rem;
+   }
+   
+   h2 {
+       font-size: 2rem;             /* ~32px */
+       font-weight: bold;
+       line-height: 1.3;
+       letter-spacing: -0.025rem;
+       margin-bottom: 0.5rem;
+   }
+   
+   h3 {
+       font-size: 1.5rem;           /* ~24px */
+       font-weight: bold;
+       line-height: 1.4;
+       margin-bottom: 0.5rem;
+   }
+   
+   p {
+       font-size: 1rem;             /* ~16px */
+       line-height: 1.6;
+       margin-bottom: 1rem;
+   }
+   
+   small {
+       font-size: 0.8rem;           /* ~12.8px */
+       line-height: 1.5;
+   }
+   
+   /* Style the header */header {
+       background-color: #fff;      /* Sets the header background color to white */
+       padding: 1.25em 0;             /* Adds padding to the top and bottom of the header */
+       text-align: center;          /* Centers the content in the header */
+       display: flex;                /* Use flexbox for header layout */
+       flex-direction: column;       /* Stack items vertically */
+       align-items: center;          /* Center items horizontally */
+   }
+   
+   header a {
+       margin-bottom: 0.625em;        /* Add space below the logo */
+   }
+   
+   /* Style the navigation */
+   nav {
+       margin-top: 1.25em;           /* Adds margin to the top of the navigation */
+   }
+   
+   nav a {
+       text-decoration: none;
+       color: #000;                /* Default link color */    margin: 0 0.625em;
+       font-weight: bold;          /* Make links bold for better visibility */
+       transition: color 0.3s;      /* Smooth transition effect */
+   }
+   
+   nav a:hover,
+   nav a:focus {
+       color: #FF0000;            /* Color when hovered or focused */
+   }/* Style the main content */
+   main {
+       padding: 1.25em;              /* Adds padding around the main content */
+       display: grid;               /* Use CSS Grid for main layout */    grid-template-columns: 1fr; /* Single column by default */
+       grid-template-rows: auto;
+       grid-gap: 1.25em;              /* Gap between grid items */}
+   
+   /* Style the footer */
+   footer {
+       text-align: center;          /* Centers the content in the footer */
+       padding: 1.25em 0;             /* Adds padding to the top and bottom of the footer */
+       background-color: #fff;      /* Sets the footer background color to white */
+   }
+   
+   /* Button Styles */
+   button {    background-color: #4CAF50; /* Green */
+       border: none;
+       color: white;
+       padding: 0.625em 1.25em;
+       text-align: center;
+       text-decoration: none;
+       display: inline-block;
+       font-size: 1rem;
+       margin: 0.25em 0.125em;    cursor: pointer;
+       border-radius: 0.3125em;
+       box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.2);
+       transition: background-color 0.3s, box-shadow 0.3s;
+   }
+   
+   button:hover,
+   button:focus {
+       background-color: #367c39;
+       box-shadow: 0 0.25em 0.4375em rgba(0, 0, 0, 0.3);
+   }
+   
+   button:active {
+       background-color: #2d6430;
+       box-shadow: 0 0.0625em 0.1875em rgba(0, 0, 0, 0.2);
+   }/* Media query for desktop layout */
+   @media (min-width: 1024px) {
+       main {
+           grid-template-columns: 1fr 3fr; /* Two columns: sidebar and content */
+           grid-template-areas:
+               "sidebar content";
+       }
+   
+       aside {
+           grid-area: sidebar;
+       }
+   
+       .content {
+           grid-area: content;
+       }
+   }
+   
+   /* Media query for tablet layout */
+   @media (min-width: 768px) and (max-width: 1023px) {
+       main {
+           grid-template-columns: 1fr; /* Single column for tablets */
+           grid-template-areas:
+               "sidebar"
+               "content";
+       }
+   
+       aside {
+           grid-area: sidebar;    }
+   
+       .content {
+           grid-area: content;
+       }
+   
+       /* Adjust font sizes for tablet */
+       h1 {
+           font-size: 2.2rem;
+       }
+   
+       h2 {
+           font-size: 1.8rem;
+       }
+   
+       h3 {
+           font-size: 1.4rem;
+       }}
+   
+   /* Media query for mobile layout */
+   @media (max-width: 767px) {
+       header {
+           flex-direction: column; /* Stack header elements */        align-items: center; /* Center items */
+       }
+   
+       nav {
+           margin-top: 1.25em;
+       }
+   
+       nav a {
+           display: block;
+           margin: 0.3125em 0;
+           text-align: center;
+       }
+   
+       main {
+           grid-template-columns: 1fr; /* Single column for mobile */
+           grid-template-areas:
+               "content"; /* Stack content below the header */
+       }
+   
+       aside {
+           display: none; /* Hide the sidebar on mobile */
+       }
+   
+       .content {
+           grid-area: content;    }
+   
+       /* Adjust font sizes for mobile */
+       h1 {
+           font-size: 2rem;
+       }
+   
+       h2 {
+           font-size: 1.6rem;
+       }
+   
+       h3 {
+           font-size: 1.2rem;
+       }
+   }
+   
+   table {
+       width: 80%; /* Make tables responsive */
+   }
+   
+   img {
+       max-width: 100%; /* Make images responsive */
+       height: auto;
+   }
+   
